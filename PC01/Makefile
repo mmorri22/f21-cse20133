@@ -1,13 +1,13 @@
 # Author: Matthew Morrison
 # E-mail: matt.morrison@nd.edu
 #
-# This is the Makefile for Lecture 05
+# This is the Makefile for Programming Challenge 01
 
 # CC is for the gcc compiler for C
 CC := gcc
 
 # CFLAGS are the required compiler flags for the CSE 20133 course
-CFLAGS := -Wall -Wextra -Wconversion -Werror
+CFLAGS := -Wall -Wextra -Wconversion -Werror -lm
 
 
 # Compilation for the Prob1 program
