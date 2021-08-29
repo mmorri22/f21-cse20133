@@ -8,7 +8,7 @@ int main( void ){
 
 	++gangnam_count;
 
-	fprintf( stdout, "Initial: %d %x\n", gangnam_count, gangnam_count );
+	fprintf( stdout, "Final  : %d %x\n", gangnam_count, gangnam_count );
 
 	return 0;
 

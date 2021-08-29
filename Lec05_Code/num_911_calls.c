@@ -10,7 +10,7 @@ int main(){
     fprintf( stdout, "Initial: %d %x\n", num_911_calls, num_911_calls );
     
     /* Get one more call */
-    num_911_calls = num_911_calls + 1;
+    ++num_911_calls;
     
     /* Create a variable tracking missed calls */
     unsigned int missed_calls = 1;

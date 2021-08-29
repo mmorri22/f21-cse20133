@@ -10,7 +10,7 @@ int main( void ){
 	else if( student_class == 2 ){
 		fprintf( stdout, "Sophomore!\n" );
 	}
-	else if( stduent_class == 3 ){
+	else if( student_class == 3 ){
 
 		fprintf( stdout, "Junior\n" );
 	}
