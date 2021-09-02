@@ -9,9 +9,9 @@ int main( void ){
 
 	int y = a + b;
 
-	fprintf( stdout, "a at %p = %d\n", &a, a );
-	fprintf( stdout, "b at %p = %d\n", &b, b );
-	fprintf( stdout, "y at %p = %d\n", &y, y );
+	fprintf( stdout, "a at %p = %d %x\n", &a, a, a );
+	fprintf( stdout, "b at %p = %d %x\n", &b, b, b );
+	fprintf( stdout, "y at %p = %d %x\n", &y, y, y );
 
 	return 0;
 

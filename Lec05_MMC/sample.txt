@@ -1,0 +1,10 @@
+Hello, my name is Professor Morrison!
+
+And the pupfessor will be in class tomorrow.
+
+I have now updated using a file with my local machine.
+
+However, you will need to understand VIM in Logic Design
+* Verilog
+* Secure Shells
+* Remove stray characters.

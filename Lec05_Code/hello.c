@@ -2,8 +2,8 @@
 
 int main( void ){
 
-	fprintf( stdout, "Hello, World\n" );
+	fprintf( stdout, "Hello, World %p %p\n", 
+		stdout, &stdout );
 
 	return 0;
-
 }
