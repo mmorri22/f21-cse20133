@@ -7,7 +7,7 @@ int main( void ){
 	
 	float quotient = dividend / divisor;
 
-	fprintf( stdout, "dividend: %f %a %p\n", dividend, dividend, &dividend );
+	fprintf( stdout, "dividend: %.10f %a %p\n", dividend, dividend, &dividend );
 	
 	fprintf( stdout, "divisor : %f %a %p\n", divisor,divisor, &divisor );
 	
