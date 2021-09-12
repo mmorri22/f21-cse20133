@@ -2,10 +2,8 @@
 
 int main( void ){
 
-	int iter;
-	// In lecture, run with 13 and then comment 13 and uncomment 14
-	//int value = 15; 
-	int value = 20;
+	int iter; 
+	int value = 5;
 	int factorial = 1;
 
 	for( iter = 1; iter <= value; ++iter ){
