@@ -10,9 +10,9 @@ int main( void ){
 	
 	double x = 1.1, y = 1.2;
 	
-	double average = findAverage( x, y );
+	/* double average = findAverage( x, y ); */
 	
-	printAverage( x, y, average );
+	printAverage( x, y, findAverage( x, y ) );
 	
 	return 0;
 }
