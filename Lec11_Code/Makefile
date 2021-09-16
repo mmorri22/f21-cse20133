@@ -1,22 +1,29 @@
-# Author: Matthew Morrison
-# E-mail: matt.morrison@nd.edu
+# Name: Howard Duck
+# Email: duck@nd.edu
 #
-# This is the Makefile for Lecture 11
+# This contains the compilation commands for Lecture 11
 
-# CC is for the gcc compiler for C 
 CC := gcc
 
-# CFLAGS are the required compiler flags for the CSE 20133 course 
 CFLAGS := -O2 -g -std=c11 -Wall -Wextra -Wconversion -Werror
 
+ducklib.o : ducklib.c 
+	$(CC) $(CFLAGS) -c ducklib.c 
+	
+ewb.o : ewb.c 
+	$(CC) $(CFLAGS) -c ewb.c 
+	
+ewb_objs := ewb.o ducklib.o
 
-# Compilation for the maggie_wifey program 
-# Command: make maggie_wifey 
+ewb: $(ewb_objs)
+	$(CC) $(CFLAGS) -o ewb $(ewb_objs)
+	
+maggie_wifey.o : maggie_wifey.c 
+	$(CC) $(CFLAGS) -c maggie_wifey.c 
+	
 maggie_wifey: maggie_wifey.o
 	$(CC) $(CFLAGS) -o maggie_is_my_hero maggie_wifey.o
-
-maggie_wifey.o: maggie_wifey.c
-	$(CC) $(CFLAGS) -c maggie_wifey.c
-
+	
 clean:
-	rm -rf a.out *.o maggie_is_my_hero
+	rm -rf *.o ewb maggie_is_my_hero
+	
