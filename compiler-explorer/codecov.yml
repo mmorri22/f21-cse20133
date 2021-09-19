@@ -1,9 +1,0 @@
-codecov:
-  notify:
-    wait_for_ci: no
-coverage:
-  status:
-    project:
-      default:
-        informational: true
-comment: false

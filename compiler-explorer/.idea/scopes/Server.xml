@@ -1,3 +1,0 @@
-<component name="DependencyValidationManager">
-  <scope name="Server" pattern="file[compiler-explorer]:lib//*||file[compiler-explorer]:app.js||file[compiler-explorer]:test//*" />
-</component>
