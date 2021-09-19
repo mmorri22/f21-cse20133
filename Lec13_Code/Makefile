@@ -93,12 +93,28 @@ sudoku_05_objects := main_05.o sudoku_05.o
 # Make sudoku_05 Executable
 sudoku_05: $(sudoku_05_objects)
 	$(CC) $(CFLAGS) -o sudoku_05 $(sudoku_05_objects)
+
+
+# Make Sudoku 06 Objects 
+sudoku_06.o: sudoku_06.c
+	$(CC) $(CFLAGS) -c sudoku_06.c
+	
+# Make main_06 Object
+main_06.o: main_06.c
+	$(CC) $(CFLAGS) -c main_06.c
+	
+# Objects for 06 compilation
+sudoku_06_objects := main_06.o sudoku_06.o
+
+# Make sudoku_06 Executable
+sudoku_06: $(sudoku_06_objects)
+	$(CC) $(CFLAGS) -o sudoku_06 $(sudoku_06_objects)
 	
 	
 # Make Clean 
 # -rf means Recursively Force
 clean:
-	rm -rf *.o sudoku_01 sudoku_02 sudoku_03 sudoku_04 sudoku_05
+	rm -rf *.o sudoku_01 sudoku_02 sudoku_03 sudoku_04 sudoku_05 sudoku_06
 
 
 
