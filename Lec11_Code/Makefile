@@ -18,6 +18,16 @@ ewb_objs := ewb.o ducklib.o
 ewb: $(ewb_objs)
 	$(CC) $(CFLAGS) -o ewb $(ewb_objs)
 	
+	
+villain.o : villain.c 
+	$(CC) $(CFLAGS) -c villain.c 
+	
+villain_objs := villain.o ducklib.o
+
+villain: $(villain_objs)
+	$(CC) $(CFLAGS) -o villain $(villain_objs)
+	
+	
 maggie_wifey.o : maggie_wifey.c 
 	$(CC) $(CFLAGS) -c maggie_wifey.c 
 	
