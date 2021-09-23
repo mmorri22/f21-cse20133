@@ -18,7 +18,12 @@ void print_greeting();
 
 int get_player_choice();
 
-void print_puzzle( int sudoku[COLS] );
+void print_puzzle( int sudoku[ROWS][COLS] );
 
+void get_user_choice( int* value, long unsigned int* row,
+					long unsigned int* col );
+
+void update_puzzle( int sudoku[ROWS][COLS], int value, 
+				long unsigned int row, long unsigned int col );
 
 #endif

@@ -145,11 +145,10 @@ unsigned check_user_input( int sudoku[ROWS][COLS], int value,
 			if( sudoku[ row_iter ][ col_iter ] == value ){
 
 				fprintf( stdout, "There is already a %d at (%lu, %lu)\n", 
-				value, row_iter, col_iter );
+					value, row_iter, col_iter );
 
 				return 0;
 			}
-
 		}	
 	}
 	

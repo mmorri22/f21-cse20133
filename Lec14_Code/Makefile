@@ -24,3 +24,17 @@ suduko_objs := main.o sudoku.o
 
 sudoku: $(suduko_objs)
 	$(CC) $(CFLAGS) -o sudoku $(suduko_objs)
+	
+	
+# main_final.c, sudoku_final.c, sudoku_final.h 
+
+main_final.o: main_final.c 
+	$(CC) $(CFLAGS) -c main_final.c 
+	
+sudoku_final.o: sudoku_final.c 
+	$(CC) $(CFLAGS) -c sudoku_final.c 
+	
+sudoku_final_objs := main_final.o sudoku_final.o
+
+sudoku_final: $(sudoku_final_objs)
+	$(CC) $(CFLAGS) -o sudoku_final $(sudoku_final_objs)

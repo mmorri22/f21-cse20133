@@ -29,18 +29,36 @@
 	 
  }
  
- void print_puzzle( int sudoku[COLS] ){
-	 
-	 long unsigned int col_iter;
-	 for( col_iter = 0; col_iter < COLS; ++col_iter ){
+ void print_puzzle( int sudoku[ROWS][COLS] ){
+	
+	long unsigned int row_iter;
+	for( row_iter = 0; row_iter < ROWS; ++row_iter ){
 		
-		fprintf( stdout, "%d ", sudoku[col_iter] );
-		
-	 }
-	 fprintf( stdout, "\n" );
+		 long unsigned int col_iter;
+		 for( col_iter = 0; col_iter < COLS; ++col_iter ){
+			
+			fprintf( stdout, "%d ", sudoku[row_iter][col_iter] );
+			
+		 }
+		 fprintf( stdout, "\n" );
+	}
  }
  
- 
+ void get_user_choice( int* value, long unsigned int* row,
+					long unsigned int* col ){
+						
+	fprintf( stdout, "Enter your choice: value row col:\n ");
+
+	fscanf( stdin, "%d %lu %lu", value, row, col );
+						
+}
+
+void update_puzzle( int sudoku[ROWS][COLS], int value, 
+				long unsigned int row, long unsigned int col )
+{
+		
+	sudoku[row][col] = value;
+}
  
  
  
