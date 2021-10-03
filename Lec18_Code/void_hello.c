@@ -50,9 +50,17 @@ int main(void){
 	*(char *)( reference ) = 10;
 	
 	long unsigned int iter;
+	
+	// reference = hello;
+	
 	for( iter = 0; iter < size; ++iter ){
 		
-		fprintf( stdout, "%c %p\n", *( (char *)( hello + iter*sizeof(char) ) ), hello + iter*sizeof(char) );
+		fprintf( stdout, "%c %p\n", *( (char *)( hello + iter*sizeof(char) ) ), 
+			hello + iter*sizeof(char) );
+			
+		// fprintf( stdout, "%c %p\n", *(char *)( reference ), reference );
+			
+		reference += sizeof(char);
 	}
 
 	free( hello );

@@ -10,6 +10,8 @@ int main()
     double double_input;
     
     // fscanf anf fprintf will go here
+	fscanf( stdin, "%d %s %f %lf", &int_input, char_input, &float_input,
+		&double_input );
     
     free( char_input );
     
