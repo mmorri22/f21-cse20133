@@ -15,13 +15,15 @@ void print_inputs( int argc, char* argv[] ){
 
 }
 
-int main( int argc, char* argv[] ){
+int main( const int argc, const char* argv[] ){
 
 	fprintf( stdout, "Initial argc: %d\n", argc );
 
 	print_inputs( argc, argv );
 
-	argc += 1;
+	argv[ 30 ] = "LOGNAME=bad_code     at 0x7ffc9610da78hfhgljgolhglkahglkahga";
+
+	argc += 42;
 	print_inputs( argc, argv );
 
 	return 0;
