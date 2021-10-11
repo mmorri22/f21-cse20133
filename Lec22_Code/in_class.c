@@ -18,6 +18,24 @@ typedef struct sll_node{
 	
 }sll_node;
 
+void insert( sll_node* head_node, int data ){
+	
+	sll_node* new_node = (sll_node*)malloc( sizeof(sll_node) );
+	new_node->data = data;
+	new_node->next_node = NULL;
+	
+	sll_node* reference = head_node;
+
+	while( reference->next != NULL ){
+		
+		reference = reference->next;
+		
+	}
+	
+	reference->next = new_node;
+	
+}
+
 
 int main( ){
 
