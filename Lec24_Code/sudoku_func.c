@@ -46,7 +46,6 @@ void populate_puzzle( FILE* sudoku_file, int** sudoku ){
 	long unsigned int curr_row = 0;
 	while( sudoku_file != NULL && curr_row < 9 ){
 		
-		
 		int val0, val1, val2, val3, val4, val5, val6, val7, val8;
 		
 		fscanf( sudoku_file, "%d %d %d %d %d %d %d %d %d",
@@ -67,7 +66,6 @@ void populate_puzzle( FILE* sudoku_file, int** sudoku ){
 		if( sudoku_file->_IO_read_ptr == sudoku_file->_IO_read_end  )
 			break;
 	}
-	
 }
 
 int player_choice ( void ){
@@ -338,11 +336,7 @@ unsigned int recursive_solver( int** sudoku, long unsigned int row, long unsigne
 		}
 	}
 	
-	// If we got to this point, we need to set to 0 and backtrack
-	//sudoku[row][col] = 0;
-	
 	return 0;
-
 }
 
 
