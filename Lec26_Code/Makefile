@@ -1,13 +1,13 @@
 # Author: Matthew Morrison
 # E-mail: matt.morrison@nd.edu
 #
-# This is the Makefile for the CSE 20133 course Lecture 17
+# This is the Makefile for the CSE 20133 course Lecture 26
 
 # GCC is for the GCC compiler for C
 CC := gcc
 
 # CFLAGS are the compiler flages for when we compile C code in this course 
-FLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm
+FLAGS := -O2 -g -Wall -Wextra -Wconversion -Werror -lm
 CFLAGS := -std=c11 $(FLAGS)
 
 

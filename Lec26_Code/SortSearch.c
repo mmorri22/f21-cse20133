@@ -123,7 +123,7 @@ int FindElement( int array[], unsigned int arrayLen, int searchVal  ){
 	
 	int low = 0;
 	int high = (int)arrayLen - 1;
-	int middle;
+	int middle = ( high + low ) / 2;
 	
 	bool found = false;
 	
