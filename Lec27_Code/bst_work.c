@@ -1,8 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// BST Node Structs
+typedef struct bst_node{
+	
+	int value;
+	
+	struct bst_node* left;
+	
+	struct bst_node* right;
+	
+} bst_node;
 
+
+typedef struct bst{
+	
+	struct bst_node* root;
+	
+} bst;
 
 void constructor( bst* int_bst ){
 	
