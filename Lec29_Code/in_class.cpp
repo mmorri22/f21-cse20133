@@ -1,19 +1,39 @@
 #include <iostream>
 #include <cstdlib>
+#include <string>
 
-int main( void ){
+void call_by_ref( int& print_int, double& print_dbl ){
+	
+	std::cout << print_int << " " << print_dbl << std::endl;
+
+	std::cout << &print_int << " " << &print_dbl << std::endl;	
+	
+	++print_int;
+	
+	print_dbl *= 2;
+	
+}
+
+int main(){
+	
+	int print_int = 10;
+	double print_dbl = -22.7;
+	
+	std::string static_str = "Go Irish! Beat Navy!";
 	
 	std::cout << "Hello, World" << std::endl;
 	
-	int int_input;
+	std::cout << "Addrs in main: " << &print_int << " " << &print_dbl << std::endl;
 	
-	if( std::cin >> int_input)
-		std::cout << int_input << " " << &int_input << std::endl;
+	call_by_ref( print_int, print_dbl );
 	
-	else
-		std::cerr << "That was bad!" << std::endl;
+	call_by_ref( print_int, print_dbl );
 	
+	for( long unsigned int iter = 0; iter < static_str.size(); ++iter ){
+		
+		std::cout << static_str.at(iter) << std::endl;
+		
+	}
 	
-	return 0;
-	
+	return EXIT_SUCCESS;
 }
