@@ -1,18 +1,36 @@
 #include <iostream>
+#include <fstream>
 #include <cstdlib>
+#include <string>
 
-int main( void ){
+int main( const int argc, const char* argv[] ){
 	
-	std::cout << "Hello, World" << std::endl;
+	std::ofstream out_stream( "output.txt" );
 	
-	int int_input;
+	out_stream << "Go ND Beat Navy!\n and beat Georgia Tech!" << std::endl;
 	
-	if( std::cin >> int_input)
-		std::cout << int_input << " " << &int_input << std::endl;
+	out_stream << "You don't want your submarine to look like that!\n" << std::endl;
 	
-	else
-		std::cerr << "That was bad!" << std::endl;
+	out_stream.close();
 	
+	if( argc != 2 )
+		return EXIT_FAILURE;
+	
+	std::ifstream connecticut( argv[1] );
+	
+	if( !connecticut )
+		return EXIT_FAILURE;
+	
+	std::string int_1, int_2;
+	
+	
+	while( connecticut >> int_1 >> int_2 ){
+		
+		std::cout << int_1 << " " << int_2 << " " << int_1 - int_2 << std::endl;
+		
+	}
+	
+	connecticut.close();
 	
 	return 0;
 	
