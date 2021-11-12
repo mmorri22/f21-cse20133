@@ -1,64 +1,84 @@
-#include <iostream> 
+#include <iostream>
 #include <cstdlib>
+#include <cmath>
+#include <vector>
 #include <string>
 
 #define COUT std::cout
 #define ENDL std::endl
-#define TWO_PI_TWO_FURIOUS 3.14159
+#define PAIR std::pair
+#define VECTOR std::vector
+#define STRING std::string
 
-template <class T>
-void print_val( T& print_value ){
+PAIR< bool, PAIR<double, double> > quadratic( double a, double b, double c ){
 	
-	COUT << print_value << ENDL;
+	double insideSqrt = b*b - 4*a*c;
+	
+	double denominator = 2 * a;
+	
+	PAIR< bool, PAIR<double, double> > solutions;
+	
+	if( insideSqrt < 0 || denominator == 0 ){
+		
+		solutions.first = false;
+		
+	}
+	else{
+		
+		solutions.first = true;
+		
+		solutions.second.first = ( -b + sqrt(insideSqrt) ) / ( 2 * a );
+		
+		solutions.second.second = ( -b - sqrt(insideSqrt) ) / ( 2 * a );
+	
+	}
+	
+	return solutions;
+}
+
+void printSolution( PAIR< bool, PAIR<double, double> >& solution ){
+	
+	if( solution.first ){
+		COUT << "{" << solution.second.first << ", " << solution.second.second << "}\n";
+	}
+	else{
+		
+		COUT << "Invalid Result." << ENDL;
+	}
 	
 }
 
-template <class Notre, class Dame>
-void print_two_vals( Notre& print_val_1, Dame& print_val_2){
+template< class Irish >
+void print_vector( VECTOR< Irish >& print_vec ){
 	
-	COUT << print_val_1 << " " << print_val_2 << ENDL;
+	for( long unsigned int iter = 0; iter < print_vec.size(); ++iter ){
+		
+		COUT << print_vec.at( iter ) << " ";
+		
+		
+	}
+	
 	
 }
 
-void print_int_func( int the_int ){
-	
-	the_int++;
-	
-	COUT << the_int << ENDL;
-}
 
-void print_int_func( const int& the_int ){
+int main() {
 	
-	COUT << the_int << ENDL;
-}
-
-int main( void ){
+	PAIR< bool, PAIR<double, double> > solution = quadratic( 2, 4.1, -3.7 );
 	
-	int print_int = 10;
-	double print_double = -22.7;
-	long unsigned int print_lui = 25;
+	printSolution( solution );
 	
-	float print_float = (float)13.1;
+	PAIR< bool, PAIR<double, double> > solution2 = quadratic( 2, 4.1, 3.7 );
 	
-	std::string print_str( "Go Irish!" );
+	printSolution( solution2 );
 	
-	print_val( print_int );
-	print_val( print_double );
-	print_val( print_lui );
+	VECTOR<int> int_vec;
 	
-	print_val( print_float );
+	VECTOR< STRING > string_vec( 12, "bob" );
 	
-	print_val( print_str );
+	VECTOR< double > dbl_vec( 7, -1.1 );
 	
-	print_two_vals( print_int, print_lui ); 
+	VECTOR<int> int_vec_2 = { -17, 22, 31, 44 };
 	
-	print_two_vals( print_float, print_str ); 
-	
-	print_two_vals( print_double, print_int ); 
-	
-	print_int_func( print_int );
-
-
-	
-	return EXIT_SUCCESS;
+	return 0;
 }
