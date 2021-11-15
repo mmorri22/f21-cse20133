@@ -17,6 +17,7 @@ void printVecElems( std::vector< Gen > theVec ){
 
 int main(){
 
+	// Default
 	std::vector< char > name;
 	
 	name.push_back('I'); name.push_back('r'); name.push_back('i');
@@ -29,10 +30,10 @@ int main(){
 	std::vector< char > equalVec = name;
 	
 	equalVec.push_back(' '); equalVec.push_back('3'); 
-	equalVec.push_back('0'); equalVec.push_back('-'); 
+	equalVec.push_back('1'); equalVec.push_back('-'); 
 	equalVec.push_back('U'); equalVec.push_back('S');
 	equalVec.push_back('C'); equalVec.push_back(' ');
-	equalVec.push_back('2'); equalVec.push_back('7');
+	equalVec.push_back('1'); equalVec.push_back('6');
 	
 	printVecElems(name);
 	printVecElems(equalVec);
@@ -41,7 +42,7 @@ int main(){
 	
 	printVecElems(integers);
 	
-	for(int i = 0; i < 10; ++i){
+	for(int i = 0; i < 14; ++i){
 		integers.at(i) = 2*i;
 	}
 	
