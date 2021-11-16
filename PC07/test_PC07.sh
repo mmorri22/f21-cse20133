@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Matthew Morrison
 # Email : matt.morrison@nd.edu
-# Fall 2021 - Data Structures - Programming Challenge - Grading Script
+# Fall 2021 - Intro to Computing - Programming Challenge - Grading Script
 #
 # This script will help TAs evaluate the course PQC programming standards
 
@@ -34,7 +34,7 @@ if test -f $REDIRECT; then
 fi
 
 # Write initial messages to the output file
-INTRO_MESSAGE="Grading script for Programming Challenge 04"
+INTRO_MESSAGE="Grading script for Programming Challenge 07"
 NAME_MESSAGE="Type in the student's name (or just press Enter):"
 ID_MESSAGE="Type in the student's Notre Dame netID name (or just press Enter):"
 
@@ -232,8 +232,8 @@ fi
 # Final Grade to both the screen and the script file.
 echo "-----------------------------" >> $SCRIPT_OUT
 echo "" >> $SCRIPT_OUT
-echo "PC04 Standards Grade Portion for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL " >> $SCRIPT_OUT
-echo "PC04 Standards Grade Portion for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL "
+echo "PC07 Standards Grade Portion for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL " >> $SCRIPT_OUT
+echo "PC07 Standards Grade Portion for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL "
 echo "Run 'vim $SCRIPT_OUT' to see the result of the test script"
 
 
