@@ -108,24 +108,24 @@ void level_order_traversal( bst_node* curr_node ){
 	
 	QUEUE< bst_node* > level_queue;
 	
-	level_queue.push( curr_node );
+	level_queue.push ( curr_node );
 	
 	while( !level_queue.empty() ){
 		
 		bst_node* temp_front = level_queue.front();
 		
 		level_queue.pop();
-	
-		COUT << temp_front->value << " " ;
 		
-		if(temp_front->left != NULL )
+		COUT << temp_front->value << " ";
+		
+		if( temp_front->left != NULL )
 			level_queue.push( temp_front->left );
-		
-		if(temp_front->right != NULL )
-			level_queue.push( temp_front->right );
 
+		if( temp_front->right != NULL )
+			level_queue.push( temp_front->right );
 		
 	}
+	
 }
 
 void destructor( bst_node* curr_node ){

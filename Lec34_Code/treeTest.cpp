@@ -5,7 +5,7 @@
 template<class T>
 void printInOrder(std::set< T >& printTree){
 	
-	for( const T& curr : printTree){
+	for(  T& curr : printTree){
 		
 		std::cout << curr << " ";
 	}
@@ -43,6 +43,7 @@ int main(){
 	
 	std::set< std::string > strTree;
 	strTree.insert("A");
+	strTree.insert("Abdcdh");
 	strTree.insert("Q");
 	strTree.insert("B");
 	strTree.insert("R");
