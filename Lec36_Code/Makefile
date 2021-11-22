@@ -11,6 +11,20 @@ FLAGS := -O2 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror -lm
 CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS)
 
 
+# run_in_class Example 
+# Command: make run_in_class
+run_in_classObjs := run_in_class.o in_class.o
+
+run_in_class: $(run_in_classObjs)
+	$(PP) $(CXXFLAGS) -o run_in_class $(run_in_classObjs)
+	./run_in_class
+
+run_in_class.o: run_in_class.cpp
+	$(PP) $(CXXFLAGS) -c run_in_class.cpp
+
+in_class.o: in_class.cpp
+	$(PP) $(CXXFLAGS) -c in_class.cpp
+
 # class1 Example 
 # Command: make point1
 class1Objs := class1.o point1.o
