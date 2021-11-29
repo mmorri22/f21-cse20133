@@ -6,7 +6,7 @@
 * This file contains examples of class constructor calls 
 **********************************************/
 
-#include "../inc/point.h"
+#include "point.h"
 
 int main(){
 
