@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Matthew Morrison
 # Email : matt.morrison@nd.edu
-# Fall 2021 - Data Structures - Programming Challenge 06 - Grading Script
+# Fall 2021 - Data Structures - Programming Challenge 10 - Grading Script
 #
 # This script will help TAs evaluate the course PQC programming standards
 
@@ -240,17 +240,17 @@ fi
 
 
 ############################################################
-# Running ./exe/JK_Test tests
+# Running ./JK_Test tests
 ############################################################
 
 # lucky tests 
-JK_TEST_1_TEST="./exe/JK_Test"
+JK_TEST_1_TEST="./JK_Test"
 JK_TEST_1_EXPECTED="Incorrect number of inputs"
 
-JK_TEST_2_TEST="./exe/JK_Test badfile.txt"
+JK_TEST_2_TEST="./JK_Test badfile.txt"
 JK_TEST_2_EXPECTED="badfile.txt does not exist"
 
-JK_TEST_3_TEST="./exe/JK_Test JK_test_1.txt"
+JK_TEST_3_TEST="./JK_Test JK_test_1.txt"
 JK_TEST_3_EXPECTED="0 1
 0 1
 1 0
@@ -260,7 +260,7 @@ JK_TEST_3_EXPECTED="0 1
 1 0
 0 1"
 
-JK_TEST_4_TEST="./exe/JK_Test JK_test_2.txt"
+JK_TEST_4_TEST="./JK_Test JK_test_2.txt"
 JK_TEST_4_EXPECTED="0 1
 0 1
 0 1
@@ -270,7 +270,7 @@ JK_TEST_4_EXPECTED="0 1
 0 1
 0 1"
 
-JK_TEST_5_TEST="./exe/JK_Test JK_test_3.txt"
+JK_TEST_5_TEST="./JK_Test JK_test_3.txt"
 JK_TEST_5_EXPECTED="0 1
 0 1
 0 1
@@ -284,7 +284,7 @@ JK_TEST_5_EXPECTED="0 1
 0 1"
 
 
-JK_TEST_6_TEST="./exe/JK_Test JK_test_4.txt"
+JK_TEST_6_TEST="./JK_Test JK_test_4.txt"
 JK_TEST_6_EXPECTED="0 1
 1 0
 1 0
@@ -478,13 +478,13 @@ fi
 ############################################################
 
 # BDC_Test tests 
-BDC_TEST_1_TEST="./exe/BDC_Test"
+BDC_TEST_1_TEST="./BDC_Test"
 BDC_TEST_1_EXPECTED="Incorrect number of inputs"
 
-BDC_TEST_2_TEST="./exe/BDC_Test badfile.txt"
+BDC_TEST_2_TEST="./BDC_Test badfile.txt"
 BDC_TEST_2_EXPECTED="badfile.txt does not exist"
 
-BDC_TEST_3_TEST="./exe/BDC_Test BDC_test_1.txt"
+BDC_TEST_3_TEST="./BDC_Test BDC_test_1.txt"
 BDC_TEST_3_EXPECTED="Initial value in main: 0 0 0 0 0
 0 0 0 1 1
 0 0 1 0 2
@@ -520,7 +520,7 @@ BDC_TEST_3_EXPECTED="Initial value in main: 0 0 0 0 0
 1 1 1 0 14
 Final value in main: 1 1 1 0 14"
 
-BDC_TEST_4_TEST="./exe/BDC_Test BDC_test_2.txt"
+BDC_TEST_4_TEST="./BDC_Test BDC_test_2.txt"
 BDC_TEST_4_EXPECTED="Initial value in main: 0 0 0 0 0
 0 0 0 0 0
 0 0 0 0 0
@@ -552,7 +552,7 @@ BDC_TEST_4_EXPECTED="Initial value in main: 0 0 0 0 0
 Final value in main: 0 0 0 0 0"
 
 
-BDC_TEST_5_TEST="./exe/BDC_Test BDC_test_3.txt"
+BDC_TEST_5_TEST="./BDC_Test BDC_test_3.txt"
 BDC_TEST_5_EXPECTED="Initial value in main: 0 0 0 0 0
 0 0 0 0 0
 0 0 0 1 1
@@ -584,7 +584,7 @@ BDC_TEST_5_EXPECTED="Initial value in main: 0 0 0 0 0
 Final value in main: 1 1 0 1 13"
 
 
-BDC_TEST_6_TEST="./exe/BDC_Test BDC_test_4.txt"
+BDC_TEST_6_TEST="./BDC_Test BDC_test_4.txt"
 BDC_TEST_6_EXPECTED="Initial value in main: 0 0 0 0 0
 0 0 0 0 0
 0 0 0 1 1
