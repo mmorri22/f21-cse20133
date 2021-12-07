@@ -2,25 +2,22 @@
 #define MULTNODE_H
 
 #include <iostream>
-#include "Node.h"
 #include "BinNode.h"
-#include "NumNode.h"
 
 class MultNode : public BinNode
 {
-protected:
 
-public:
+	public:
 
-  // overload Constructor
-  MultNode(Node* node1, Node* node2);
+	  // overload Constructor
+	  MultNode(Node* node1, Node* node2);
 
-  // destructor
-   ~MultNode ();
+	  // destructor
+	   ~MultNode ();
 
-  // Function
-  double Calc() const;
+	  // Function
+	  double Calc() const;
+  
 };
-
 
 #endif

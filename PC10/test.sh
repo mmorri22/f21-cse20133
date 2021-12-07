@@ -1,7 +1,7 @@
 #!/bin/sh
 # Author: Matthew Morrison
 # Email : matt.morrison@nd.edu
-# Fall 2021 - Data Structures - Programming Challenge 10 - Grading Script
+# Fall 2021 - Introduction to Computing - Programming Challenge 10 - Grading Script
 #
 # This script will help TAs evaluate the course PQC programming standards
 
@@ -45,7 +45,7 @@ if test -f $REDIRECT; then
 fi
 
 # Write initial messages to the output file
-INTRO_MESSAGE="Grading script for Programming Challenge 06"
+INTRO_MESSAGE="Grading script for Programming Challenge 10"
 NAME_MESSAGE="Type in the student's name (or just press Enter):"
 ID_MESSAGE="Type in the student's Notre Dame netID name (or just press Enter):"
 
@@ -68,58 +68,6 @@ echo "To get the best results, run 'make clean' before running this script next 
 echo "If you are a student, don't forget to run 'make clean' before you push!"  >> $SCRIPT_OUT
 
 
-#######################
-# Check if there are no .o or executable files 
-#######################
-echo "" >> $SCRIPT_OUT
-echo "-----------------------------" >> $SCRIPT_OUT
-echo "Testing for clean pushing to GitHub" >> $SCRIPT_OUT
-
-# Variables 
-LIST_OUTPUTS="ls *"
-
-
-# Test for object files 
-CHECK_O_TEST="test -f objects/*.o"
-
-# Test for the executable 
-CHECK_EXE="test -f exe/JK_TEST"    
-
-# Next, we check for the object files  
-if test -f "objects/JKFF.o" || test -f "objects/BDC.o"; then
-    echo "One or more object file exist." >> $SCRIPT_OUT
-	echo "Executables must be cleaned prior to GitHub push." >> $SCRIPT_OUT
-	echo "Automatic 50 point deduction, per project description" >> $SCRIPT_OUT
-	echo "0 / $CHECK_O_PTS" >> $SCRIPT_OUT
-	echo "Here are the files currently in the project folder." >> $SCRIPT_OUT
-	CHECK_O_TEST_RESULT=$( $LIST_OUTPUTS ) 
-	echo "$CHECK_O_TEST_RESULT" >> $SCRIPT_OUT
-
-else
-	echo "Student successfully pushed to GitHub with no object files" >> $SCRIPT_OUT
-	((STUDENT_GRADE += $CHECK_O_PTS))
-	echo "$CHECK_O_PTS / $CHECK_O_PTS" >> $SCRIPT_OUT
-fi
-
-
-# Next, we check for the executable 
-if test -f "exe/JK_TEST.o" || test -f "exe/BDC_Test"; then
-    echo "Executable Exists." >> $SCRIPT_OUT
-	echo "Executables must be cleaned prior to GitHub push." >> $SCRIPT_OUT
-	echo "Automatic 50 point deduction, per project description" >> $SCRIPT_OUT
-	echo "0 / $CHECK_EXE_PTS" >> $SCRIPT_OUT
-	echo "Here are the files currently in the project folder." >> $SCRIPT_OUT
-	CHECK_PC06_TEST_RESULT=$( $LIST_OUTPUTS ) >> $SCRIPT_OUT
-	echo "$CHECK_PC06_TEST_RESULT" >> $SCRIPT_OUT
-
-else
-	echo "Student successfully pushed to GitHub with no executables" >> $SCRIPT_OUT
-	((STUDENT_GRADE += $CHECK_EXE_PTS))
-	echo "$CHECK_EXE_PTS / $CHECK_EXE_PTS" >> $SCRIPT_OUT
-fi
-
-# Make initialize 
-make initialize
 
 #######################
 # Test the make clean command 
@@ -164,7 +112,7 @@ echo "Testing make JK_Test" >> $SCRIPT_OUT
 make clean >> $SCRIPT_OUT
 
 # make decode comparison variables
-MAKE_CLEAN_FORCE="rm -rf objects/* exe/*"
+MAKE_CLEAN_FORCE="rm -rf *.o JK_Test BDC_Test"
 MAKE_JK_TEST_TEST="make JK_Test"
 MAKE_GCC="g++"
 MAKE_WALL="-Wall"

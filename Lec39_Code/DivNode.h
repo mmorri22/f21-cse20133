@@ -2,25 +2,21 @@
 #define DIVNODE_H
 
 #include <iostream>
-#include "Node.h"
 #include "BinNode.h"
-#include "NumNode.h"
 
 class DivNode : public BinNode
 {
-protected:
 
-public:
+	public:
 
-  // overload Constructor
-  DivNode(Node* node1, Node* node2);
+	  // overload Constructor
+	  DivNode(Node* node1, Node* node2);
 
-  // destructor
-   ~DivNode ();
+	  // destructor
+	   ~DivNode ();
 
-  // Function
-  double Calc() const;
+	  // Function
+	  double Calc() const;
 };
-
 
 #endif

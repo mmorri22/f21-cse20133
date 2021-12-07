@@ -3,23 +3,22 @@
 
 #include <iostream>
 #include "Node.h"
-#include "BinNode.h"
 
-class NumNode : public BinNode
+class NumNode : public Node
 {
-protected:
-  double num;
+	protected:
+		double num;
 
-public:
+	public:
 
-  // overload Constructor
-  NumNode(double numIN);
+	  // Constructor
+	  NumNode(double numIN);
 
-  // destructor
-  virtual ~NumNode ();
+	  // destructor
+	  virtual ~NumNode ();
 
-  // overloaded method
-  double Calc() const;
+	  // overloaded method
+	  double Calc() const;
 };
 
 

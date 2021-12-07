@@ -6,27 +6,25 @@
 
 class BinNode : public Node
 {
-protected:
-  Node* leftNode;
-  Node* rightNode;
+	protected:
+		Node* leftNode;
+		Node* rightNode;
 
-public:
-  //default constructor
-  BinNode();
+	public:
+		//default constructor
+		BinNode();
 
-  // destructor
-  virtual ~BinNode ();
+		// destructor
+		virtual ~BinNode ();
 
-  // overload Constructor
-  BinNode(Node* Lnode, Node* Rnode);
+		// overload Constructor
+		BinNode(Node* Lnode, Node* Rnode);
 
+		// copy constructor
+		BinNode(const BinNode& copy);
 
-  // copy constructor
-  BinNode(const BinNode& copy);
-
-  // assignmnet Operator
-  BinNode& operator=(const BinNode& assign);
+		// assignmnet Operator
+		BinNode& operator=(const BinNode& assign);
 };
-
 
 #endif

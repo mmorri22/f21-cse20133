@@ -2,25 +2,21 @@
 #define SUBNODE_H
 
 #include <iostream>
-#include "Node.h"
 #include "BinNode.h"
-#include "NumNode.h"
 
 class SubNode : public BinNode
 {
-protected:
 
-public:
+	public:
 
-  // overload Constructor
-  SubNode(Node* node1, Node* node2);
+	  // overload Constructor
+	  SubNode(Node* node1, Node* node2);
 
-  // destructor
-   ~SubNode ();
+	  // destructor
+	   ~SubNode ();
 
-  // Function
-  double Calc() const;
+	  // Function
+	  double Calc() const;
 };
-
 
 #endif

@@ -1,45 +1,45 @@
-# This is the Makefile for the CSE 20133 - HW08
+# This is the Makefile for the CSE 20133 - Lecture 39
 
 # G++ is for the GCC compiler for C++
 PP := g++
 
 # CXXFLAGS are the compiler flages for when we compile C++ code in this course
-FLAGS := -O0 -g -Wall -Wextra -Wconversion -Wshadow -pedantic -Werror
+FLAGS := -O2 -g -Wall -Wextra -Wconversion -Wshadow -Werror
 CXXFLAGS := -m64 -std=c++11 -Weffc++ $(FLAGS)
 
 
 # Command: make Lab11
-HW08Objs := HW08.o BinNode.o NumNode.o AddNode.o SubNode.o DivNode.o MultNode.o
+PolymorphObjs := Polymorph.o BinNode.o NumNode.o AddNode.o SubNode.o DivNode.o MultNode.o
 
-HW08: $(HW08Objs)
-	$(PP) $(CXXFLAGS) -o HW08 $(HW08Objs)
+Polymorph: $(PolymorphObjs)
+	$(PP) $(CXXFLAGS) -o Polymorph $(PolymorphObjs)
 
-HW08.o: HW08.cpp
-	$(PP) $(CXXFLAGS) -c HW08.cpp -o $@
+Polymorph.o: Polymorph.cpp
+	$(PP) $(CXXFLAGS) -c Polymorph.cpp -o $@
 
-BinNode.o: BinNode.cpp BinNode.h Node.h
+BinNode.o: BinNode.cpp 
 	$(PP) $(CXXFLAGS) -c BinNode.cpp
 
-NumNode.o: NumNode.cpp NumNode.h BinNode.h
+NumNode.o: NumNode.cpp
 	$(PP) $(CXXFLAGS) -c NumNode.cpp
 
-AddNode.o: AddNode.cpp AddNode.h
+AddNode.o: AddNode.cpp
 	$(PP) $(CXXFLAGS) -c AddNode.cpp
 
-SubNode.o: SubNode.cpp SubNode.h
+SubNode.o: SubNode.cpp
 	$(PP) $(CXXFLAGS) -c SubNode.cpp
 
-DivNode.o: DivNode.cpp DivNode.h
+DivNode.o: DivNode.cpp
 	$(PP) $(CXXFLAGS) -c DivNode.cpp
 
-MultNode.o: MultNode.cpp MultNode.h
+MultNode.o: MultNode.cpp
 	$(PP) $(CXXFLAGS) -c MultNode.cpp
 
 
 # Make all
-all: HW08
+all: Polymorph
 
 
 # Make clean
 clean :
-	rm -rf *.o HW08
+	rm -rf *.o Polymorph
