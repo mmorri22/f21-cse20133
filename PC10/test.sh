@@ -827,8 +827,8 @@ echo "-----------------------------" >> $SCRIPT_OUT
 # Final Grade to both the screen and the script file.
 echo "-----------------------------" >> $SCRIPT_OUT
 echo "" >> $SCRIPT_OUT
-echo "PC06 Testing Portion Grade for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL " >> $SCRIPT_OUT
-echo "PC06 Testing Portion Grade for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL "
+echo "PC10 Testing Portion Grade for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL " >> $SCRIPT_OUT
+echo "PC10 Testing Portion Grade for $STUDENT_NAME ($STUDENT_ID): $STUDENT_GRADE / $TOTAL "
 echo "Run 'vim $SCRIPT_OUT' to see the result of the test script"
 
 
